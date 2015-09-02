@@ -1,5 +1,6 @@
 # Help-Channel-Server
 
+![alt tag](https://github.com/Help-Channel-Team/Help-Channel-Server/blob/master/escenario.png)
 
 NoVnc - Cliente HTML5 VNC
 https://github.com/kanaka/noVNC
