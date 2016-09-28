@@ -108,3 +108,99 @@ function WebSocket2TCPSocket(request, host, port)
   });
 
 }
+
+//////////////// Repetidor lado Servidor ////////////////
+
+var serverRepeater = net.createServer();  
+serverRepeater.on('connection', handleConnectionServer);
+
+serverRepeater.listen(5500, function() {  
+  console.log('server listening to %j', server.address());
+});
+
+function handleConnectionServer(conn) {  
+  var remoteAddress = conn.remoteAddress + ':' + conn.remotePort;
+  console.log('new server connection from %s', remoteAddress);
+
+  conn.setTimeout(timeout);
+
+  //conn.write("RFB 000.000\n");
+  console.log("En TCP conection"); 
+
+
+  conn.on('data', onConnData);
+  conn.once('close', onConnClose);
+  conn.on('error', onConnError);
+
+  function onConnData(d) {
+    console.log('connection data from %s: %j', remoteAddress, d);
+    //conn.write(d);
+
+    	if(clientes["1234"] !== undefined)
+	{
+            console.log("Cliente detectado en el 1234");
+	    clientes["1234"].write(d);
+	}
+
+  }
+
+  function onConnClose() {
+    console.log('connection from %s closed', remoteAddress);
+  }
+
+  function onConnError(err) {
+    console.log('Connection %s error: %s', remoteAddress, err.message);
+  }
+}
+
+///////////////////////////////////////////////////////////////
+
+
+
+///////////////// Repetidor lado Cliente /////////////////
+
+var clientRepeater = net.createServer();  
+clientRepeater.on('connection', handleConnectionClient);
+
+clientRepeater.listen(5900, function() {  
+  console.log('server listening to %j', server.address());
+});
+
+function handleConnectionClient(conn) {  
+  var remoteAddress = conn.remoteAddress + ':' + conn.remotePort;
+  console.log('new client connection from %s', remoteAddress);
+
+  conn.setTimeout(timeout);
+
+  console.log("En TCP conection"); 
+
+  conn.on('data', onConnData);
+  conn.once('close', onConnClose);
+  conn.on('error', onConnError);
+
+  function onConnData(d) {
+    console.log('connection data from %s: %j', remoteAddress, d);
+    //conn.write(d);
+    console.log("Antes del envio a servidor desde cliente");
+	if(servidores["1234"] !== undefined)
+	{
+		console.log("Servidor detectado en el 1234");
+		console.log("Antes del envio a servidor desde cliente,write");
+		servidores["1234"].write(d);
+		console.log("Después del envio a servidor desde cliente,write");
+	}	
+  }
+
+  function onConnClose() {
+    console.log('connection from %s closed', remoteAddress);
+  }
+
+  function onConnError(err) {
+    console.log('Connection %s error: %s', remoteAddress, err.message);
+  }
+}
+
+///////////////////////////////////////////////////////////////
+
+
+
