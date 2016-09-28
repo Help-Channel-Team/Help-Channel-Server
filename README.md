@@ -20,8 +20,10 @@ http://www.karlrunge.com/x11vnc/
 Nginx
 
 // Websockets Proxy
+
 server {
-        443;
+
+        listen 443;
         server_name dominio_proyecto.com;
 
         location /wsServer {
@@ -42,8 +44,10 @@ server {
 
 }
 
-// WebServer administración y cliente VNC
+WebServer administración y cliente VNC
+
 server {
+
         listen 443 ssl;
         server_name dominio_proyecto.com;
 
