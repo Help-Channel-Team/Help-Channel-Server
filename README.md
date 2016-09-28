@@ -1,21 +1,6 @@
 # Help-Channel
 
- +-------------------------------------------+                      +-----------------------------------------------+
- | Help Channel Client                       |                      | Help Channel Server                           |
- |-------------------------------------------|                      |-----------------------------------------------|
- |   +----------+       +--------------+     |   +-------------+    |   +------------------+        +-------------+ |
- |   |  x11VNC  | <---->|Cliente hcc.py| <=====> |  Internet   | <====> | proxy web NGINX  | <----->|Server hcs.js| |
- |   |          |       |   ó hcc.js   |     |   |  	       |    |	|                  |        |             | |
- |   +----------+       +--------------+     |   +-------------+    |   +------------------+        +-------------+ |
- +-------------------------------------------+                      +-----------------------------------------------+
-
-
-	+------------------+ 	LOCATION 
-	| 		   |    /wsServer      WebSocket para conexión desde cliente hcc.js 
-	| 		   |    /wsClient      Websocket para conexión desde cliente VNC NoVNC
-	|       NGINX	   |    /tech  	       Web NoVNC	
-	| 	           |    /admin	       Web de administración y gestión del proyecto	
-	+------------------+
+![Alt text](/hc.png?raw=true "Diagrama Servidor")
 
 Paso 1. El usuario que necesita ayuda la solicita desde el cliente hcc.py, y el técnico que está logado en la web de administración ve dicha solicitud.
 Paso 2. El técnico acepta la solicitud.
