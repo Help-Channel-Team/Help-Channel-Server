@@ -1,21 +1,6 @@
 # Help-Channel
 
- +-------------------------------------------+                      +-----------------------------------------------+
- | Help Channel Client                       |                      | Help Channel Server                           |
- |-------------------------------------------|                      |-----------------------------------------------|
- |   +----------+       +--------------+     |   +-------------+    |   +------------------+        +-------------+ |
- |   |  x11VNC  | <---->|Cliente hcc.py| <=====> |  Internet   | <====> | proxy web NGINX  | <----->|Server hcs.js| |
- |   |          |       |   ó hcc.js   |     |   |  	       |    |	|                  |        |             | |
- |   +----------+       +--------------+     |   +-------------+    |   +------------------+        +-------------+ |
- +-------------------------------------------+                      +-----------------------------------------------+
-
-
-	+------------------+ 	LOCATION 
-	| 		   |    /wsServer      WebSocket para conexión desde cliente hcc.js 
-	| 		   |    /wsClient      Websocket para conexión desde cliente VNC NoVNC
-	|       NGINX	   |    /tech  	       Web NoVNC	
-	| 	           |    /admin	       Web de administración y gestión del proyecto	
-	+------------------+
+![Alt text](/hc.png?raw=true "Diagrama Servidor")
 
 Paso 1. El usuario que necesita ayuda la solicita desde el cliente hcc.py, y el técnico que está logado en la web de administración ve dicha solicitud.
 Paso 2. El técnico acepta la solicitud.
@@ -27,6 +12,16 @@ Paso 5. El técnico que va a proporcionar asistencia ve que el usuario está lis
 
 Servidor hcs.js. NODEJS
 Proporciona los websockets /wsClient y /wsServer que comunican cliente y servidor de VNC entre si.  
+
+timeout = 100000;       Timeout para la conexión a los websockets, tanto el cliente como el servidor deben permanecer conectados en ausencia del otro extremo de la comunicación. 
+fileKey = "ssl.key";    Certificados encriptación WebSockets
+fileCrt = "ssl.crt";    Certificados encriptación WebSockets
+hostAddr = "127.0.0.1"; IP local de escucha del servidor
+hostPort = 4443;	Puerto local de escucha del servidor		      
+hostRepeaterServer = "127.0.0.1";    En caso de usar el repetidor Perl, estos son los valores de escucha para extremos cliente y servidor. Usando repetidor node, no es necesario.
+portRepeaterServer = 5500;
+hostRepeaterClient = "127.0.0.1";
+portRepeaterClient = 5900;
 
 Cliente hcc.py PYTHON
 Interfaz gráfica para el entorno de usuario y cliente de Websockets para conectar el tráfico local del X11VNC con el websocket /wsServer 
