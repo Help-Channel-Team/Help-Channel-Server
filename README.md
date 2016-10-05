@@ -4,13 +4,19 @@ Requisitos previos:
 
 Se necesita tener en el equipo que haga de servidor, un servidor web con PHP y con soporte para WebSockets. También Node-js.
 
-El servidor PHP se usará para el backend de administración y gestión de los técnicos, situado en el código del servidor en la carpeta /Administration. Proporciona también los Servicios Web que usará el cliente para solicitar asistencia. Toda esta parte está desarrollada en el Framework de PHP Yii.
+El servidor PHP se usará para el backend de administración y gestión de los técnicos, situado en el código del servidor en la carpeta /Administration. Proporciona también los Servicios Web que usará el cliente para solicitar asistencia. Toda esta parte está desarrollada en el Framework de PHP Yii 2.0.
 
+Sin entrar en temas de instalación de nginx o apache como posibles servidores Web, el proyecto Yii es necesario proporcionarle las dependencias usando composer.
 
+https://getcomposer.org/
 
+Desde la carpeta de instalación /Administrator habría que hacer ./composer install
 
+La carpeta raíz de este entorno de administración que hay que configurar en el servidor web es /Administration/web/
 
+El proyecto tiene habilitado Friendly URL, PHP debe tener habilitado el módulo mod_rewrite con el .htaccess .
 
+"INCLUIR contenido del .htaccess al repositorio"
 
 
 ![Alt text](/hc.png?raw=true "Diagrama Servidor")
