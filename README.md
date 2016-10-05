@@ -1,5 +1,18 @@
 # Help-Channel
 
+Requisitos previos:
+
+Se necesita tener en el equipo que haga de servidor, un servidor web con PHP y con soporte para WebSockets. También Node-js.
+
+El servidor PHP se usará para el backend de administración y gestión de los técnicos, situado en el código del servidor en la carpeta /Administration. Proporciona también los Servicios Web que usará el cliente para solicitar asistencia. Toda esta parte está desarrollada en el Framework de PHP Yii.
+
+
+
+
+
+
+
+
 ![Alt text](/hc.png?raw=true "Diagrama Servidor")
 
 Paso 1. El usuario que necesita ayuda la solicita desde el cliente hcc.py, y el técnico que está logado en la web de administración ve dicha solicitud.
