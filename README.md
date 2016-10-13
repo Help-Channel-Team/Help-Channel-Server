@@ -16,8 +16,18 @@ La carpeta raíz de este entorno de administración que hay que configurar en el
 
 El proyecto tiene habilitado Friendly URL, PHP debe tener habilitado el módulo mod_rewrite con el .htaccess .
 
-"INCLUIR contenido del .htaccess al repositorio"
+Contenido del archivo .htaccess
+-------------------------------------------------------------------------------------------------------
 
+RewriteEngine on
+
+# If a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Otherwise forward it to index.php
+RewriteRule . index.php
+
+--------------------------------------------------------------------------------------------------------
 
 ![Alt text](/hc.png?raw=true "Diagrama Servidor")
 
