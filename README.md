@@ -10,7 +10,16 @@ Sin entrar en temas de instalación de nginx o apache como posibles servidores W
 
 https://getcomposer.org/
 
-Desde la carpeta de instalación /Administrator habría que hacer ./composer install
+Una vez instalado, desde la carpeta /Administrator:
+
+./composer global require "fxp/composer-asset-plugin:^1.2.0"
+
+
+Desde la carpeta de instalación /Administrator:
+
+./composer install
+
+
 
 La carpeta raíz de este entorno de administración que hay que configurar en el servidor web es /Administration/web/
 
