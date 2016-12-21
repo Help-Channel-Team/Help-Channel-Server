@@ -1,0 +1,15 @@
+{
+    "name": "my-application",
+    "version": "0.1.0",
+    "description": "A sample Node.js app using Express 4",
+    "author": "First Last <first.last@example.com>",
+    "main": "app.js",
+    "scripts": {
+    "prestart": "npm install",
+    "start": "node app.js"
+    },
+    "dependencies": {
+    "express": "^4.13.3"
+    },
+    "license" : "MIT"
+}
