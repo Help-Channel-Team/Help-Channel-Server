@@ -19,7 +19,7 @@
 -- Table structure for table `helpchannel_connection`
 --
 
-CREATE DATABASE helpchannel CHARACTER SET utf8 COLLATE utf8_general;
+CREATE DATABASE helpchannel;
 USE helpchannel;
 
 DROP TABLE IF EXISTS `helpchannel_connection`;
