@@ -2,7 +2,7 @@ mysql:
     build: ./mariadb
     dockerfile: Dockerfile.node
     ports:
-    - 3333:3306
+    - 3306:3306
     volumes:
     - ./code/Helpchannel.sql:/docker-entrypoint-initdb.d/Helpchannel.sql
     environment:
@@ -18,7 +18,12 @@ node:
     container_name: hc_node
     command: npm start
 php:
-    image: php:7-fpm
+    build: ./php7-fpm
+    dockerfile: Dockerfile.node
+    #stdin_open: true
+    #tty: false
+    #"entrypoint": ["cd /code/Administration"]
+    #;composer global require 'fxp/composer-asset-plugin:*';composer update"]
     volumes:
         - ./code:/code
     links:

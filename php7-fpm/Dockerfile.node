@@ -1,0 +1,14 @@
+FROM php:7-fpm
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php
+RUN php -r "unlink('composer-setup.php');"
+RUN mv composer.phar /usr/local/bin/composer
+RUN apt-get update && apt-get install -y git
+#COPY entrypoint.sh /entrypoint.sh
+#ENTRYPOINT ["/entrypoint.sh"]
+#RUN ["chmod", "700", "/entrypoint.sh"]
+WORKDIR /code/Administration
+#ENTRYPOINT /usr/local/bin/composer global require "fxp/composer-asset-plugin:*";composer update 
+#RUN ["chmod", "700", "web/assets"]
+#RUN ["chmod", "700", "assets"]
+#RUN ["chmod", "700", "runtime"]
