@@ -18,7 +18,7 @@ $dynagrid = DynaGrid::begin ( [
 							if (Yii::$app->user->identity->group == 'ADMIN')
 								return '<span class="btn btn-warning" >Recibiendo asistencia <span class="glyphicon glyphicon-expand"></span></span>';
 							else
-								return '<a href="https://helpchannel.ingenieriacreativa.es/tecnico?repeaterID=' . $data->connection_code . '" target="_blank" class="btn btn-warning" >Conectar <span class="glyphicon glyphicon-expand"></span></a>';
+								return '<a href="/tecnico?repeaterID=ID:' . $data->connection_code . '" target="_blank" class="btn btn-warning" >Conectar <span class="glyphicon glyphicon-expand"></span></a>';
 						} 
 				],
 				[ 
