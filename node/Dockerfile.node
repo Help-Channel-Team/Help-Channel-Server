@@ -1,0 +1,21 @@
+FROM node:latest
+
+RUN mkdir -p /usr/src/app
+
+WORKDIR /usr/src/app
+
+COPY package.json /usr/src/app/
+
+COPY app.js /usr/src/app/
+
+#COPY client.js /usr/src/app/
+
+#COPY server.js /usr/src/app/
+
+COPY websockify.js /usr/src/app/websockifyCLIENT.js
+
+COPY websockify.js /usr/src/app/websockifySERVER.js
+
+#EXPOSE 6900
+
+#RUN npm start

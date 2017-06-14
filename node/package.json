@@ -1,0 +1,20 @@
+{
+    "name": "my-application",
+    "version": "0.1.0",
+    "description": "NODE VNC REPEATER",
+    "author": "cygitsolutions.com",
+    "main": "app.js",
+    "scripts": {
+    "prestart": "npm install",
+    "start": "node app.js"
+    },
+    "dependencies": {
+    "express": "^4.13.3",
+    "optimist": "latest",
+    "wordwrap": "latest",
+    "http": "latest",
+    "node-websockify": "latest",
+    "mysql": "latest"
+    },
+    "license" : "MIT"
+}

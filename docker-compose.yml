@@ -9,12 +9,15 @@ mysql:
       MYSQL_ROOT_PASSWORD: admin
     container_name: hc_mysql
 node:
-    build: ./demonode 
+    build: ./node
     dockerfile: Dockerfile.node
     volumes:
     - ./code:/code
     ports:
-    - "8888:8888"
+    - 6500:6500
+    - 6900:6900
+    links:
+        - mysql
     container_name: hc_node
     command: npm start
 php:
@@ -32,9 +35,7 @@ php:
 web:
     image: nginx:latest
     ports:
-        - "80:80"
         - "443:443"
-        - "8080:8080"
     volumes:
         - ./code:/code
         - ./conf/site.conf:/etc/nginx/conf.d/site.conf
