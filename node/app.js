@@ -82,6 +82,7 @@ net.createServer(function (socket) {
 		}
 		catch(err) {	
         	}
+	}	
     }
 
   });
