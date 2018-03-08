@@ -41,7 +41,7 @@ net.createServer(function (socket) {
   // Handle incoming messages from servers.
     socket.on('data', function (data) {
 
-console.log("hay datos en servidor" + String(data));
+    console.log("hay datos en servidor" + String(data));
 
     if(String(data).startsWith("ID"))
     {
@@ -58,7 +58,6 @@ console.log("hay datos en servidor" + String(data));
 
         servers[id] = socket;
 
-
         if(id in clients)
         { 
              console.log("id in clients");
@@ -70,14 +69,19 @@ console.log("hay datos en servidor" + String(data));
              delete servers[id];
 
              clients[socket].write("RFB 003.008\n","binary"); 
+		
         }
     }
     else
     {
-        if(socket in clients)
+        //if(socket in clients)
+	if(clients[socket] != undefined)
 	{
-  	    clients[socket].write(data,"binary");
-        }
+		try {
+    			clients[socket].write(data,"binary");
+		}
+		catch(err) {	
+        	}
     }
 
   });
@@ -129,9 +133,18 @@ console.log("hay datos en cliente "+ String(data));
     }
     else
     {
-	if(socket in servers)
+	//if(socket in servers)  
+	if(servers[socket] != undefined)
         {
-            servers[socket].write(data,"binary"); 
+
+		try {
+                        servers[socket].write(data,"binary");
+                }
+                catch(err) {    
+                }
+
+
+
         }
     }
   });

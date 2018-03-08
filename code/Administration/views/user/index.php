@@ -75,7 +75,7 @@ $this->params ['breadcrumbs'] [] = $this->title;
 					$dynagrid->gridOptions ['panel'] = false;
 				}
 				$exportColumns = $dynagrid->gridOptions ['columns'];
-				array_pop ( $exportColumns );
+				//array_pop ( $exportColumns );
 				echo ExportMenu::widget ( [ 
 						'dataProvider' => $searchModel->search ( $customFilter ),
 						'filterModel' => $searchModel,
