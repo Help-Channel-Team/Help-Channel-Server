@@ -1,5 +1,7 @@
 FROM node:latest
 
+RUN docker-php-ext-install pdo pdo_mysql
+
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
@@ -19,3 +21,4 @@ COPY websockify.js /usr/src/app/websockifySERVER.js
 #EXPOSE 6900
 
 #RUN npm start
+
