@@ -5,9 +5,9 @@ net = require('net');
 websockifyServer = require('./websockifyCLIENT.js');
 websockifyClient = require('./websockifySERVER.js');
 
-var mysql = require('mysql');
+//var mysql = require('mysql');
 
-var con = mysql.createConnection({
+/*var con = mysql.createConnection({
   host: "mysql",
   user: "root",
   password: "admin"
@@ -17,7 +17,7 @@ con.connect(function(err) {
   if (err) throw err;
   console.log("Connected to Mysql Database from Node!");
 });
-
+*/
 websockifyServer({
   source: '0.0.0.0:6500',
   target: '127.0.0.1:5500'
