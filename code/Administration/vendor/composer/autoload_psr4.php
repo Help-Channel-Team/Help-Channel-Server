@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
     'yii\\swiftmailer\\' => array($vendorDir . '/yiisoft/yii2-swiftmailer/src'),
     'yii\\jui\\' => array($vendorDir . '/yiisoft/yii2-jui/src'),
     'yii\\gii\\' => array($vendorDir . '/yiisoft/yii2-gii/src'),
@@ -14,15 +13,6 @@ return array(
     'yii\\composer\\' => array($vendorDir . '/yiisoft/yii2-composer'),
     'yii\\codeception\\' => array($vendorDir . '/yiisoft/yii2-codeception'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap/src'),
-=======
-    'yii\\swiftmailer\\' => array($vendorDir . '/yiisoft/yii2-swiftmailer'),
-    'yii\\jui\\' => array($vendorDir . '/yiisoft/yii2-jui'),
-    'yii\\gii\\' => array($vendorDir . '/yiisoft/yii2-gii'),
-    'yii\\debug\\' => array($vendorDir . '/yiisoft/yii2-debug'),
-    'yii\\composer\\' => array($vendorDir . '/yiisoft/yii2-composer'),
-    'yii\\codeception\\' => array($vendorDir . '/yiisoft/yii2-codeception'),
-    'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
     'lajax\\languagepicker\\' => array($vendorDir . '/lajax/yii2-language-picker'),
     'kartik\\widgets\\' => array($vendorDir . '/kartik-v/yii2-widgets'),
@@ -54,9 +44,6 @@ return array(
     'kartik\\alert\\' => array($vendorDir . '/kartik-v/yii2-widget-alert'),
     'kartik\\affix\\' => array($vendorDir . '/kartik-v/yii2-widget-affix'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
-<<<<<<< HEAD
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/EmailValidator'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib/Doctrine/Common/Lexer'),
-=======
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
 );

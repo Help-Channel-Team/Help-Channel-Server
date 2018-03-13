@@ -9,11 +9,7 @@ return array (
     'version' => '9999999-dev',
     'alias' => 
     array (
-<<<<<<< HEAD
       '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap/src',
-=======
-      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     ),
   ),
   'yiisoft/yii2-swiftmailer' => 
@@ -22,7 +18,6 @@ return array (
     'version' => '9999999-dev',
     'alias' => 
     array (
-<<<<<<< HEAD
       '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer/src',
     ),
   ),
@@ -33,9 +28,6 @@ return array (
     'alias' => 
     array (
       '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf',
-=======
-      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     ),
   ),
   'kartik-v/yii2-krajee-base' => 
@@ -104,11 +96,7 @@ return array (
   'kartik-v/yii2-export' => 
   array (
     'name' => 'kartik-v/yii2-export',
-<<<<<<< HEAD
     'version' => '1.2.8.0',
-=======
-    'version' => '9999999-dev',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     'alias' => 
     array (
       '@kartik/export' => $vendorDir . '/kartik-v/yii2-export',
@@ -171,11 +159,7 @@ return array (
   'kartik-v/yii2-widget-rating' => 
   array (
     'name' => 'kartik-v/yii2-widget-rating',
-<<<<<<< HEAD
     'version' => '1.0.3.0',
-=======
-    'version' => '9999999-dev',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     'alias' => 
     array (
       '@kartik/rating' => $vendorDir . '/kartik-v/yii2-widget-rating',
@@ -265,28 +249,12 @@ return array (
   'kartik-v/yii2-widgets' => 
   array (
     'name' => 'kartik-v/yii2-widgets',
-<<<<<<< HEAD
     'version' => '3.4.0.0',
-=======
-    'version' => '9999999-dev',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     'alias' => 
     array (
       '@kartik/widgets' => $vendorDir . '/kartik-v/yii2-widgets',
     ),
   ),
-<<<<<<< HEAD
-=======
-  'kartik-v/yii2-mpdf' => 
-  array (
-    'name' => 'kartik-v/yii2-mpdf',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf',
-    ),
-  ),
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
   'lajax/yii2-language-picker' => 
   array (
     'name' => 'lajax/yii2-language-picker',
@@ -302,11 +270,7 @@ return array (
     'version' => '9999999-dev',
     'alias' => 
     array (
-<<<<<<< HEAD
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui/src',
-=======
-      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     ),
   ),
   'yiisoft/yii2-codeception' => 
@@ -324,11 +288,7 @@ return array (
     'version' => '9999999-dev',
     'alias' => 
     array (
-<<<<<<< HEAD
       '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug/src',
-=======
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     ),
   ),
   'yiisoft/yii2-gii' => 
@@ -337,11 +297,7 @@ return array (
     'version' => '9999999-dev',
     'alias' => 
     array (
-<<<<<<< HEAD
       '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii/src',
-=======
-      '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
->>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     ),
   ),
 );
