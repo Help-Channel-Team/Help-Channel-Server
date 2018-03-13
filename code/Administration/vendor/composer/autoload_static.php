@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
+class ComposerStaticInit32d785ce3cecf1b7513f15648905fe69
+=======
 class ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf
+>>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
 {
     public static $files = array (
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
@@ -62,11 +66,37 @@ class ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf
         array (
             'cebe\\markdown\\' => 14,
         ),
+<<<<<<< HEAD
+        'E' => 
+        array (
+            'Egulias\\EmailValidator\\' => 23,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Lexer\\' => 22,
+        ),
+=======
+>>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     );
 
     public static $prefixDirsPsr4 = array (
         'yii\\swiftmailer\\' => 
         array (
+<<<<<<< HEAD
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer/src',
+        ),
+        'yii\\jui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-jui/src',
+        ),
+        'yii\\gii\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-gii/src',
+        ),
+        'yii\\debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-debug/src',
+=======
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
         ),
         'yii\\jui\\' => 
@@ -80,6 +110,7 @@ class ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf
         'yii\\debug\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-debug',
+>>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
         ),
         'yii\\composer\\' => 
         array (
@@ -91,7 +122,11 @@ class ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf
         ),
         'yii\\bootstrap\\' => 
         array (
+<<<<<<< HEAD
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-bootstrap/src',
+=======
             0 => __DIR__ . '/..' . '/yiisoft/yii2-bootstrap',
+>>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
         ),
         'yii\\' => 
         array (
@@ -217,6 +252,17 @@ class ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf
         array (
             0 => __DIR__ . '/..' . '/cebe/markdown',
         ),
+<<<<<<< HEAD
+        'Egulias\\EmailValidator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
+        ),
+        'Doctrine\\Common\\Lexer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer',
+        ),
+=======
+>>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
     );
 
     public static $prefixesPsr0 = array (
@@ -281,10 +327,17 @@ class ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
+            $loader->prefixLengthsPsr4 = ComposerStaticInit32d785ce3cecf1b7513f15648905fe69::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit32d785ce3cecf1b7513f15648905fe69::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit32d785ce3cecf1b7513f15648905fe69::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit32d785ce3cecf1b7513f15648905fe69::$classMap;
+=======
             $loader->prefixLengthsPsr4 = ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitd8df49ab55a14d7378e72ab2152160cf::$classMap;
+>>>>>>> 27d4830526fe419587ba8dd6221f64469b0de137
 
         }, null, ClassLoader::class);
     }
