@@ -1,7 +1,5 @@
 FROM node:latest
 
-RUN docker-php-ext-install pdo pdo_mysql
-
 RUN mkdir -p /usr/src/app
 
 WORKDIR /usr/src/app
