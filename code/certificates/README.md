@@ -1,1 +1,1 @@
-Carpeta destinada para certificados
+SSL certificates for NGINX
