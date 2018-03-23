@@ -76,6 +76,7 @@ CREATE TABLE `helpchannel_connection_tracking` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
+
 --
 -- Table structure for table `helpchannel_profile`
 --
@@ -157,8 +158,9 @@ CREATE TABLE `helpchannel_user` (
 
 LOCK TABLES `helpchannel_user` WRITE;
 /*!40000 ALTER TABLE `helpchannel_user` DISABLE KEYS */;
-INSERT INTO `helpchannel_user` VALUES (1,'admin','admin','admin',NULL,NULL,1),(2,'demo','demo','demo','9ffcf0f151a49404a240cab8a3fa01adba667d1b',NUL
-L,3),(3,'tec1','tec1','tec1',NULL,NULL,2);
+
+INSERT INTO `helpchannel_user` VALUES (1,'admin','admin','admin',NULL,NULL,1),(2,'demo','demo','demo','9ffcf0f151a49404a240cab8a3fa01adba667d1b',NULL,3),(3,'tec1','tec1','tec1',NULL,NULL,2);
+
 /*!40000 ALTER TABLE `helpchannel_user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

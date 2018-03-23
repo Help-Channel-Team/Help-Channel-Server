@@ -41,7 +41,7 @@ net.createServer(function (socket) {
   // Handle incoming messages from servers.
     socket.on('data', function (data) {
 
-    console.log("hay datos en servidor" + String(data));
+//    console.log("Data in server" + String(data));
 
     if(String(data).startsWith("ID"))
     {
@@ -107,7 +107,7 @@ net.createServer(function (socket) {
   // Handle incoming messages from clients.
   socket.on('data', function (data) {
 
-console.log("hay datos en cliente "+ String(data));
+//console.log("Data in client "+ String(data));
 
     if(String(data).startsWith("ID"))
     {
