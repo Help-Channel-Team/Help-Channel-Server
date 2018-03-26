@@ -33,6 +33,7 @@ CREATE TABLE `helpchannel_connection` (
   `end_date` datetime DEFAULT NULL,
   `connection_code` varchar(255) NOT NULL,
   `machine_name` varchar(255) DEFAULT NULL,
+  `machine_data` varchar(255) DEFAULT NULL,
   `user_id` int(11) NOT NULL,
   `technician_id` int(11) DEFAULT NULL,
   `status_id` int(11) NOT NULL,

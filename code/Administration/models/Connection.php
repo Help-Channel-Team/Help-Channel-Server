@@ -21,6 +21,7 @@ use yii\db\ActiveRecord;
  * @property integer $status_id
  * @property integer $creator_id
  * @property string $machine_name
+ * @property string $machine_data
  * @property HelpchannelUser $creator0
  * @property HelpchannelStatus $status0
  * @property HelpchannelUser $technician0
@@ -49,7 +50,7 @@ class Connection extends \yii\db\ActiveRecord
             [['creation_date', 'connection_code', 'user_id', 'status_id', 'creator_id'], 'required'],
             [['creation_date', 'modification_date', 'start_date', 'end_date'], 'safe'],
             [['user_id', 'technician_id', 'status_id', 'creator_id'], 'integer'],
-            [['connection_code','machine_name'], 'string', 'max' => 255],
+            [['connection_code','machine_name','machine_data'], 'string', 'max' => 255],
             [['connection_code'], 'unique']
         ];
     }
@@ -71,6 +72,7 @@ class Connection extends \yii\db\ActiveRecord
             'status_id' => Yii::t('app','Status'),
             'creator_id' =>  Yii::t('app','Creator'),
             'machine_name' => Yii::t('app','Machine Name'),
+            'machine_data' => Yii::t('app','Machine Data'),
         ];
     }
 
