@@ -87,16 +87,6 @@ class SiteController extends Controller
     	return $this->render($view, $model);
     }
 	
-	public function actionMail() {
-		$today = date('d-m-Y');
-		
-		Yii::$app->mailer->compose('customer/publish-job', array('username' => 'Fernando'))
-		->setTo(array('dfernandez@ingenieriacreativa.es'))
-		->setFrom(array('no-reply@myfixpert.com' => 'Myfixpert'))
-		->setReplyTo('help@myfixpert.com')
-		->setSubject('Bienvenido a Myfixpert')
-		->send();
-	}
 	
 	public function actionLogin()
     {

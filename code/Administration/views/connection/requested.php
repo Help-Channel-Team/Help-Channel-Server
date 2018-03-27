@@ -10,6 +10,10 @@ $dynagrid = DynaGrid::begin ( [
 						'label' => 'Usuario',
 						'value' => 'user.username' 
 				],
+                                [ 
+                                                'label' => 'Origin',
+                                                'value' => 'machine_name' 
+                                ],
 				[ 
 						'format' => 'html',
 						'value' => function ($data) {

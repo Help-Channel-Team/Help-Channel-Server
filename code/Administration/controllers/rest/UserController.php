@@ -20,7 +20,7 @@ class UserController extends ActiveController
 	 * Lists all User models.
 	 * @return mixed
 	 */
-	public function actionLogin($username, $password, $machine_name,$machine_data)
+	public function actionLogin($username, $password, $machine_name,$machine_token,$machine_data)
 	{
 		$model = new LoginForm();
 		$model->username = $username;
@@ -40,6 +40,7 @@ class UserController extends ActiveController
 			$connection->connection_code = sha1(uniqid());
 			$connection->status_id = 1;
 			$connection->machine_name = $machine_name;
+			$connection->machine_token = $machine_token;
 			$connection->machine_data = $machine_data;
 			
 			$connection->save();
